@@ -1,0 +1,71 @@
+$theme-colors: (
+  "primary": #5284e3,
+  "secondary": #6c757d,
+  "success": #198754,
+  "info": #0dcaf0,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #fcfcfd,
+  "dark": #212529,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+}
+
+input[type="email"],
+input[type="password"] ::placeholder {
+  color: #98999f;
+}
+
+label {
+  color: #98999f;
+}
+
+.input-group-text {
+  background-color: #fff !important;
+}
+
+.input-group-text > svg {
+  font-size: 1.5rem;
+  color: #98999f;
+}
+
+.anchor {
+  color: #292a2d;
+  text-decoration: none;
+}
+
+.btn-lg {
+  height: 64px;
+}
+
+.btn-light {
+  border-color: #e5e5e5;
+}
+
+.text-color-default {
+  color: #292a2d;
+}
+
+.text-color-primary {
+  color: #5284e3;
+}
+
+.top-bar {
+  height: 36px;
+  padding: 5px;
+
+  svg {
+    height: 26px;
+    width: 26px;
+  }
+}
