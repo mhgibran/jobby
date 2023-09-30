@@ -7,74 +7,59 @@ import {
   HiOutlineUser,
 } from "react-icons/hi2";
 import googleIcon from "../assets/img/google.png";
+import TopTittle from "../components/title";
+import FloatingInput from "../components/floating-input";
+import Button from "../components/button";
+
+export const metadata = {
+  title: "Jobby - Register",
+  openGraph: {
+    title: "Jobby - Register",
+  },
+};
 
 export default function Register() {
   return (
     <div className="container">
-      <div className="mt-5">
-        <h1 className="fs-4">
-          Welcome! <br />
-          Please Sign up now
-        </h1>
-      </div>
+      <TopTittle title={`Welcome!`} subTitle={`Please Sign up now`} />
       <div className="mt-4">
-        <div className="input-group mb-3">
-          <span className="input-group-text">
-            <HiOutlineUser />
-          </span>
-          <div className="form-floating">
-            <input
-              type="fullname"
-              id="email"
-              className="form-control border-start-0"
-              placeholder="Fullname"
-            />
-            <label htmlFor="fullname">Fullname</label>
-          </div>
-        </div>
-        <div className="input-group mb-3">
-          <span className="input-group-text">
-            <HiOutlineEnvelope />
-          </span>
-          <div className="form-floating">
-            <input
-              type="email"
-              id="email"
-              className="form-control border-start-0"
-              placeholder="Email"
-            />
-            <label htmlFor="email">Email Address</label>
-          </div>
-        </div>
-        <div className="input-group mb-3">
-          <span className="input-group-text">
-            <HiOutlineLockClosed />
-          </span>
-          <div className="form-floating">
-            <input
-              type="password"
-              id="password"
-              className="form-control border-start-0"
-              placeholder="Password"
-            />
-            <label htmlFor="password">Password</label>
-          </div>
-        </div>
+        <FloatingInput
+          icon={<HiOutlineUser />}
+          type="text"
+          id="fullname"
+          label="Fullname"
+        />
+        <FloatingInput
+          icon={<HiOutlineEnvelope />}
+          type="email"
+          id="email"
+          label="Email Address"
+        />
+        <FloatingInput
+          icon={<HiOutlineLockClosed />}
+          type="password"
+          id="password"
+          label="Password"
+        />
         <div className="d-flex flex-column text-center gap-3 mt-5">
-          <button
-            type="button"
-            className="btn btn-lg btn-primary text-white fs-6"
-          >
-            Register
-          </button>
+          <Button
+            className="text-white"
+            text="Register"
+            variant="primary"
+            size="lg"
+          />
           <p className="fs-6 mb-0">or continue with</p>
-          <button
-            type="button"
-            className="btn btn-light btn-lg border-1 d-flex align-items-center justify-content-center gap-2 fs-6"
-          >
-            <Image src={googleIcon} width={18} height={18} alt="Google" />{" "}
-            Google Account
-          </button>
+          <Button
+            className="border-1 d-flex align-items-center justify-content-center gap-2"
+            text={
+              <>
+                <Image src={googleIcon} width={18} height={18} alt="Google" />{" "}
+                Google Account
+              </>
+            }
+            variant="light"
+            size="lg"
+          />
         </div>
       </div>
       <div className="fixed-bottom text-center">

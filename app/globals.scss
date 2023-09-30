@@ -22,8 +22,15 @@ body {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"] ::placeholder {
   color: #98999f;
+}
+
+.form-control:focus {
+  border-color: #dee2e6;
+  outline: 0;
+  box-shadow: none;
 }
 
 label {

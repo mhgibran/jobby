@@ -1,9 +1,4 @@
-import {
-  HiMagnifyingGlass,
-  HiOutlineAdjustmentsHorizontal,
-  HiOutlineBell,
-  HiOutlineCog6Tooth,
-} from "react-icons/hi2";
+import { HiOutlineBell, HiOutlineCog6Tooth } from "react-icons/hi2";
 import googleIcon from "./assets/img/google.png";
 import tokpedIcon from "./assets/img/tokped.png";
 import paypalIcon from "./assets/img/paypal.png";
@@ -12,6 +7,16 @@ import twitterIcon from "./assets/img/twitter.png";
 import RecommendedJob from "./components/home/recommended";
 import RecentJob from "./components/home/recent";
 import BottomTabMenu from "./components/bottom-tab";
+import TopTittle from "./components/title";
+import JobSearchInput from "./components/search-input";
+
+export const metadata = {
+  title: "Jobby - Home",
+  openGraph: {
+    title: "Jobby - Home",
+    description: "Let's discover your ideal job here",
+  },
+};
 
 export default function Home() {
   const data = [
@@ -68,7 +73,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container pb-5">
+    <div className="container" style={{ paddingBottom: "8rem" }}>
       <div className="d-flex justify-content-between align-items-center top-bar mt-2">
         <div style={{ marginLeft: "-6px" }}>
           <HiOutlineCog6Tooth className="text-color-default" />
@@ -78,34 +83,8 @@ export default function Home() {
           <HiOutlineBell className="text-color-default" />
         </div>
       </div>
-      <div className="mt-4">
-        <h1 className="fs-4 fw-semibold">
-          Let's discover <br />
-          your ideal job here.
-        </h1>
-      </div>
-      <div
-        className="d-flex justify-content-between gap-2 align-items-center border rounded px-2 mt-4"
-        style={{ height: "64px" }}
-      >
-        <div className="px-2">
-          <HiMagnifyingGlass
-            style={{ height: "26px", width: "26px", color: "#98999f" }}
-          />
-        </div>
-        <input
-          type="text"
-          id="search"
-          className="form-control border-0"
-          placeholder="Search.."
-          aria-label="Search"
-        />
-        <div className="px-2">
-          <HiOutlineAdjustmentsHorizontal
-            style={{ height: "26px", width: "26px", color: "#98999f" }}
-          />
-        </div>
-      </div>
+      <TopTittle title={`Let's discover`} subTitle={`your ideal job here.`} />
+      <JobSearchInput title="Search" />
       <RecommendedJob data={data} />
       <RecentJob data={data} />
       <BottomTabMenu />
