@@ -1,0 +1,135 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "icon": "https://logo.clearbit.com/google.com",
+      "companyName": "Google LLC",
+      "position": "Senior UI Designer",
+      "address": "South Jakarta",
+      "date": "2021-06-10",
+      "type": "Onsite",
+      "sallary": "$8k/mo",
+      "appilicant": 16,
+      "company": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+      "descriptions": {
+        "job": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+        "responsibilties": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+          "Deserunt iste possimus odit",
+          "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+          "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "icon": "https://logo.clearbit.com/tokopedia.com",
+      "companyName": "Tokopedia",
+      "position": "Senior UX Designer",
+      "address": "West Jakarta",
+      "date": "2021-05-02",
+      "type": "Hybrid",
+      "sallary": "$4k/mo",
+      "appilicant": 20,
+      "company": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+      "descriptions": {
+        "job": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+        "responsibilties": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+          "Deserunt iste possimus odit",
+          "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+          "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "icon": "https://logo.clearbit.com/gojek.com",
+      "companyName": "Gojek",
+      "position": "UX Researcher",
+      "address": "South Jakarta",
+      "date": "2021-05-25",
+      "type": "Onsite",
+      "sallary": "$3k/mo",
+      "appilicant": 34,
+      "company": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+      "descriptions": {
+        "job": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+        "responsibilties": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+          "Deserunt iste possimus odit",
+          "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+          "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "icon": "https://logo.clearbit.com/paypal.com",
+      "companyName": "Paypal",
+      "position": "Product Manager",
+      "address": "West Jakarta",
+      "date": "2021-06-11",
+      "type": "Onsite",
+      "sallary": "$6k/mo",
+      "appilicant": 102,
+      "company": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+      "descriptions": {
+        "job": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+        "responsibilties": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+          "Deserunt iste possimus odit",
+          "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+          "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "icon": "https://logo.clearbit.com/twitter.com",
+      "companyName": "Twitter",
+      "position": "UX Designer",
+      "address": "West Jakarta",
+      "date": "2021-06-21",
+      "type": "Hybrid",
+      "sallary": "$5k/mo",
+      "appilicant": 5,
+      "company": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+      "descriptions": {
+        "job": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt iste possimus odit. Distinctio tempore esse, voluptate nihil exercitationem tenetur. Deserunt nesciunt suscipit dolores doloribus, sipsum quidem esse culpa sequi quasi?",
+        "responsibilties": [
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+          "Deserunt iste possimus odit",
+          "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+          "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi"
+        ]
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Michael",
+      "review": "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      "date": "2020-01-02"
+    },
+    {
+      "id": 2,
+      "name": "Kate",
+      "review": "Deserunt iste possimus odit",
+      "date": "2021-04-23"
+    },
+    {
+      "id": 3,
+      "name": "John Doe",
+      "review": "Distinctio tempore esse, voluptate nihil exercitationem tenetur",
+      "date": "2021-10-20"
+    },
+    {
+      "id": 4,
+      "name": "Matheu",
+      "review": "Deserunt nesciunt suscipit dolores doloribus, ipsum quidem esseculpa sequi quasi",
+      "date": "2022-02-03"
+    }
+  ]
+}

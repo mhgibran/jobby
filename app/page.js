@@ -9,6 +9,7 @@ import RecentJob from "./components/home/recent";
 import BottomTabMenu from "./components/bottom-tab";
 import TopTittle from "./components/title";
 import JobSearchInput from "./components/search-input";
+import Header from "./components/header";
 
 export const metadata = {
   title: "Jobby - Home",
@@ -18,71 +19,20 @@ export const metadata = {
   },
 };
 
-export default function Home() {
-  const data = [
-    {
-      id: 1,
-      icon: googleIcon,
-      companyName: "Google LLC",
-      position: "Senior UI Designer",
-      address: "South Jakarta",
-      date: "2021-06-10",
-      type: "Onsite",
-      sallary: "$8k/mo",
-    },
-    {
-      id: 2,
-      icon: tokpedIcon,
-      companyName: "Tokopedia",
-      position: "Senior UX Designer",
-      address: "West Jakarta",
-      date: "2021-05-02",
-      type: "Hybrid",
-      sallary: "$4k/mo",
-    },
-    {
-      id: 3,
-      icon: gojekIcon,
-      companyName: "Gojek",
-      position: "UX Researcher",
-      address: "South Jakarta",
-      date: "2021-05-25",
-      type: "Onsite",
-      sallary: "$3k/mo",
-    },
-    {
-      id: 4,
-      icon: paypalIcon,
-      companyName: "Paypal",
-      position: "Product Manager",
-      address: "West Jakarta",
-      date: "2021-06-11",
-      type: "Onsite",
-      sallary: "$6k/mo",
-    },
-    {
-      id: 5,
-      icon: twitterIcon,
-      companyName: "Twitter",
-      position: "UX Designer",
-      address: "West Jakarta",
-      date: "2021-06-21",
-      type: "Hybrid",
-      sallary: "$5k/mo",
-    },
-  ];
+async function getJobs() {
+  const res = await fetch("http://localhost:3009/jobs");
+  if (!res.ok) {
+    console.log("error while getting jobs");
+  }
+  return res.json();
+}
+
+export default async function Home() {
+  const data = await getJobs();
 
   return (
     <div className="container" style={{ paddingBottom: "8rem" }}>
-      <div className="d-flex justify-content-between align-items-center top-bar mt-2">
-        <div style={{ marginLeft: "-6px" }}>
-          <HiOutlineCog6Tooth className="text-color-default" />
-        </div>
-        <div className="text-color-default fw-semibold">Home</div>
-        <div style={{ marginRight: "-6px" }}>
-          <HiOutlineBell className="text-color-default" />
-        </div>
-      </div>
+      <Header title="Home" />
       <TopTittle title={`Let's discover`} subTitle={`your ideal job here.`} />
       <JobSearchInput title="Search" />
       <RecommendedJob data={data} />

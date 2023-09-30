@@ -17,12 +17,7 @@ export default function RecommendedJob(props) {
           </Link>
         </div>
       </div>
-      <Swiper
-        spaceBetween={16}
-        slidesPerView={1.5}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
+      <Swiper spaceBetween={16} slidesPerView={1.5}>
         {data && data.length
           ? data.map((item, index) => {
               return (
