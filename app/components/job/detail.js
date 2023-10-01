@@ -2,6 +2,7 @@
 import { imageLoader } from "@/app/utils/image";
 import Image from "next/image";
 import React, { useState } from "react";
+import Button from "../button";
 
 export default function JobDetail(props) {
   const { data, reviews } = props;
@@ -65,95 +66,105 @@ export default function JobDetail(props) {
   };
 
   return (
-    <div className="d-flex flex-column gap-4 mt-4">
-      <div className="d-flex flex-column gap-3 text-center">
-        <div
-          className="d-flex align-items-center border p-2 rounded mx-auto"
-          style={{ height: "100px", width: "100px" }}
-        >
-          <Image
-            className="img-fluid"
-            loader={imageLoader}
-            src={data.icon}
-            width={100}
-            height={100}
-            alt={data.companyName}
-            unoptimized
-          />
+    <>
+      <div className="d-flex flex-column gap-4 mt-4">
+        <div className="d-flex flex-column gap-3 text-center">
+          <div
+            className="d-flex align-items-center border p-2 rounded mx-auto"
+            style={{ height: "100px", width: "100px" }}
+          >
+            <Image
+              className="img-fluid"
+              loader={imageLoader}
+              src={data.icon}
+              width={100}
+              height={100}
+              alt={data.companyName}
+              unoptimized
+            />
+          </div>
+          <div className="text-color-default">
+            <p>
+              <span className="fs-6 fw-semibold">{data.position}</span> <br />
+              <span className="fs-7 fw-light">
+                {data.companyName} - {data.address}
+              </span>
+            </p>
+          </div>
         </div>
-        <div className="text-color-default">
-          <p>
-            <span className="fs-6 fw-semibold">{data.position}</span> <br />
-            <span className="fs-7 fw-light">
-              {data.companyName} - {data.address}
-            </span>
-          </p>
+        <div className="row border rounded mx-2" style={{ height: "82px" }}>
+          <div className="col-4 my-auto text-center border-end">
+            <p className="text-color-default mb-0">
+              <span className="fs-6 fw-medium">{data.sallary}</span> <br />
+              <span className="fs-8 fw-light">Sallary</span>
+            </p>
+          </div>
+          <div className="col-4 my-auto text-center border-end">
+            <p className="text-color-default mb-0">
+              <span className="fs-6 fw-medium">{data.appilicant}</span> <br />
+              <span className="fs-8 fw-light">Appilicants</span>
+            </p>
+          </div>
+          <div className="col-4 my-auto text-center">
+            <p className="text-color-default mb-0">
+              <span className="fs-6 fw-medium">{data.type}</span> <br />
+              <span className="fs-8 fw-light">Job Type</span>
+            </p>
+          </div>
+        </div>
+        <div className="d-flex justify-content-between gap-2 border-bottom mx-2">
+          <div
+            className={`py-2 ${
+              active == "description"
+                ? "text-primary border-bottom border-primary border-2"
+                : "text-muted"
+            }`}
+            style={{ cursor: "pointer" }}
+            onClick={() => setActive("description")}
+          >
+            Description
+          </div>
+          <div
+            className={`py-2 ${
+              active == "company"
+                ? "text-primary border-bottom border-primary border-2"
+                : "text-muted"
+            }`}
+            style={{ cursor: "pointer" }}
+            onClick={() => setActive("company")}
+          >
+            Company
+          </div>
+          <div
+            className={`py-2 ${
+              active == "review"
+                ? "text-primary border-bottom border-primary border-2"
+                : "text-muted"
+            }`}
+            style={{ cursor: "pointer" }}
+            onClick={() => setActive("review")}
+          >
+            Reviews
+          </div>
+        </div>
+        <div id="job-detail" className="mx-1 py-2">
+          {active == "description" ? (
+            <Description />
+          ) : active == "company" ? (
+            <Company />
+          ) : (
+            <Review />
+          )}
         </div>
       </div>
-      <div className="row border rounded mx-2" style={{ height: "82px" }}>
-        <div className="col-4 my-auto text-center border-end">
-          <p className="text-color-default mb-0">
-            <span className="fs-6 fw-medium">{data.sallary}</span> <br />
-            <span className="fs-8 fw-light">Sallary</span>
-          </p>
-        </div>
-        <div className="col-4 my-auto text-center border-end">
-          <p className="text-color-default mb-0">
-            <span className="fs-6 fw-medium">{data.appilicant}</span> <br />
-            <span className="fs-8 fw-light">Appilicants</span>
-          </p>
-        </div>
-        <div className="col-4 my-auto text-center">
-          <p className="text-color-default mb-0">
-            <span className="fs-6 fw-medium">{data.type}</span> <br />
-            <span className="fs-8 fw-light">Job Type</span>
-          </p>
-        </div>
+      <div className="fixed-bottom d-grid p-2 bg-white">
+        <Button
+          size="lg"
+          variant="primary"
+          text="Apply Now"
+          className="text-white"
+        />
       </div>
-      <div className="d-flex justify-content-between gap-2 border-bottom mx-2">
-        <div
-          className={`py-2 ${
-            active == "description"
-              ? "text-primary border-bottom border-primary border-2"
-              : "text-muted"
-          }`}
-          style={{ cursor: "pointer" }}
-          onClick={() => setActive("description")}
-        >
-          Description
-        </div>
-        <div
-          className={`py-2 ${
-            active == "company"
-              ? "text-primary border-bottom border-primary border-2"
-              : "text-muted"
-          }`}
-          style={{ cursor: "pointer" }}
-          onClick={() => setActive("company")}
-        >
-          Company
-        </div>
-        <div
-          className={`py-2 ${
-            active == "review"
-              ? "text-primary border-bottom border-primary border-2"
-              : "text-muted"
-          }`}
-          style={{ cursor: "pointer" }}
-          onClick={() => setActive("review")}
-        >
-          Reviews
-        </div>
-      </div>
-      <div id="job-detail" className="mx-1 py-2">
-        {active == "description" ? (
-          <Description />
-        ) : active == "company" ? (
-          <Company />
-        ) : (
-          <Review />
-        )}
-      </div>
-    </div>
+    </>
   );
 }
