@@ -6,9 +6,10 @@ import React from "react";
 import { HiOutlineBookmark } from "react-icons/hi2";
 
 export default function JobCard(props) {
-  const { item } = props;
+  const { item, index } = props;
   return (
     <div
+      key={index ? index : ""}
       className="card border rounded"
       style={{
         backgroundColor: "#FCFCFD",
