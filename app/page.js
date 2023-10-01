@@ -1,9 +1,3 @@
-import { HiOutlineBell, HiOutlineCog6Tooth } from "react-icons/hi2";
-import googleIcon from "./assets/img/google.png";
-import tokpedIcon from "./assets/img/tokped.png";
-import paypalIcon from "./assets/img/paypal.png";
-import gojekIcon from "./assets/img/gojek.png";
-import twitterIcon from "./assets/img/twitter.png";
 import RecommendedJob from "./components/home/recommended";
 import RecentJob from "./components/home/recent";
 import BottomTabMenu from "./components/bottom-tab";
